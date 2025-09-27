@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+:root {
+  --scrollbar-track: #f0f0f0; /* light gray background */
+  --scrollbar-thumb: #a0aec0; /* gray thumb */
+}
+
+.dark {
+  --scrollbar-track: #2d3748; /* dark bg */
+  --scrollbar-thumb: #718096; /* lighter gray thumb */
+}
+
+
+.tasks-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 6px;
+}
+
+.tasks-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.tasks-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 10px;
+  border: 2px solid var(--scrollbar-track);
+}
+
+/* Scrollbar for dropdown in header */
+.dropdown-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.dropdown-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.dropdown-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.15); /* Subtle light scrollbar */
+  border-radius: 10px;
+  border: 2px solid transparent;
+}
+
+/* Firefox fallback */
+.dropdown-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+}
+
+@layer utilities {
+  @keyframes shadow-pulse {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+    }
+    50% {
+      box-shadow: 0 0 70px rgba(168, 85, 247, 0.8);
+    }
+  }
+
+  .animate-shadow-pulse {
+    animation: shadow-pulse 3s ease-in-out infinite;
+  }
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
