@@ -24,13 +24,16 @@ import Header from './Header';
 import HeroSection from './HeroSection';
 
 
+
 const MusicApp = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTrack, setCurrentTrack] = useState(0);
   const [likedTracks, setLikedTracks] = useState(new Set([0, 2]));
   const [volume, setVolume] = useState(75);
   const [progress, setProgress] = useState(45);
-  const [categories, setCategories] = useState([]);
+  
+
+  
   
   
   
@@ -217,7 +220,9 @@ const MusicApp = () => {
               <button className="text-gray-400 hover:text-white font-medium">Show all</button>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              {[
+              {
+              
+              [
                 { name: 'The Weeknd', image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=300&fit=crop', followers: '89.2M' },
                 { name: 'Ariana Grande', image: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300&h=300&fit=crop', followers: '78.5M' },
                 { name: 'Drake', image: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=300&h=300&fit=crop', followers: '85.1M' },

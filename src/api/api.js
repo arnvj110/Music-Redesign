@@ -18,9 +18,6 @@ export const search = async (query, type= 'track,artist,album,playlist', limit =
 };
 
 
-
-
-
 export const getAlbum = async (id) => {
   const res = await spotifyClient.get(`/albums/${id}`);
   return res.data;
@@ -32,11 +29,3 @@ export const getArtist = async (id) => {
   return res.data;
 };
 
-
-export const getMyTopTracks = async (limit = 6) => {
-  const res = await spotifyClient.get('/me/top/tracks', {
-    params: { limit },
-    
-  });
-  return res.data.items;
-}

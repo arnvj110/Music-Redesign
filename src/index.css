@@ -74,3 +74,30 @@ html, body, #root {
   height: 100%;
   overflow: hidden;
 }
+
+@font-face {
+  font-family: 'DeterminationMono';
+  src: url('./assets/DeterminationMonoWebRegular-Z5oq.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DeterminationSans';
+  src: url('./assets/DeterminationSansWebRegular-369X.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
